@@ -1,0 +1,77 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+        {
+            "path" : "pages/learn_tang/learn_tang",
+            "style" : {
+				"navigationBarTitleText":"学堂"
+				
+			}
+        }
+        ,{
+            "path" : "pages/BBS/BBS",
+            "style" : {
+				"navigationBarTitleText":"论坛"
+			}
+        },
+		{
+		    "path" : "pages/my/my",
+		    "style" : {
+				"navigationBarTitleText":"我的"
+			}
+		}
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "寻川野外实习助手",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8",
+		"enablePullDownRefresh":true,
+		"backgroundTextStyle":"dark"
+	},
+	"tabBar": {
+		"color" : "#333333",
+		"selectedColor" : "#007AFF",
+		"borderStyle" : "black",
+		"backgroundColor" : "#F8F8F8",
+		"list":[
+			{
+			    "pagePath" : "pages/learn_tang/learn_tang",
+			    "iconPath" : "static/learn_tang.png",
+			    "selectedIconPath" : "static/learn_tang.png",
+			    "text" : "学堂"
+			},
+			
+			{
+			    "pagePath" : "pages/index/index",
+			    "iconPath" : "static/tab_class.png",
+			    "selectedIconPath" : "static/tab_class.png",
+			    "text" : "主页"
+				
+			},
+			{
+			    "pagePath" : "pages/BBS/BBS",
+			    "iconPath" : "static/tab_profile.png",
+			    "selectedIconPath" : "static/tab_profile.png",
+			    "text" : "论坛"
+			}
+		]
+	},
+	"condition" : { //模式配置，仅开发期间生效
+		"current": 0, //当前激活的模式(list 的索引项)
+		"list": [
+			{
+				"name": "", //模式名称
+				"path": "", //启动页面，必选
+				"query": "" //启动参数，在页面的onLoad函数里面得到
+			}
+		]
+	}
+}
